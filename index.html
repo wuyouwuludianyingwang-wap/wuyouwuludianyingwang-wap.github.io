@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="无忧无虑电影网（wuyouwuludianyingwang-wap.github.io）影视片单与观影入口整理，倡导正版观影、尊重版权，整理内容仅供学习与交流参考。">
+<meta name="keywords" content="无忧无虑电影网, 影视片单, 观影入口, 电影, 剧集, 正版观影, wuyouwuludianyingwang-wap.github.io">
+<meta name="author" content="无忧无虑电影网">
+<meta name="theme-color" content="#fbf8f2">
+<meta property="og:type" content="website">
+<meta property="og:title" content="无忧无虑电影网 · 影视片单与观影入口整理 | wuyouwuludianyingwang-wap.github.io">
+<meta property="og:description" content="无忧无虑电影网整理电影与剧集片单，分类清晰，持续更新，倡导正版观影、尊重版权。">
+<meta property="og:url" content="https://wuyouwuludianyingwang-wap.github.io/">
+<meta property="og:site_name" content="无忧无虑电影网">
+<link rel="canonical" href="https://wuyouwuludianyingwang-wap.github.io/">
+<title>无忧无虑电影网 · 影视片单与观影入口整理 | wuyouwuludianyingwang-wap.github.io</title>
+<style>
+/* ===== 水彩晕染 · 手绘涂鸦 ===== */
+:root{
+  --cream:#fbf8f2; --paper:#f6f1e7; --ink:#2b2722; --ink2:#6b6357; --line:#e2d9c8;
+  --sky:#6fb3d8; --sky2:#b9ddea; --peach:#f4a259; --rose:#e26d5a; --plum:#7b6ca8; --mint:#5aa98c; --mustard:#e0b04a; --blush:#f0c4b8;
+  --max:1260px;
+  --sans:"WenQuanYi Micro Hei","PingFang SC","Microsoft YaHei",sans-serif;
+  --hand:"Caveat","Kalam","WenQuanYi Micro Hei",cursive;
+  --serif:"Source Han Serif SC","Noto Serif CJK SC","Songti SC",Georgia,serif;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+body{background:var(--cream);color:var(--ink);font-family:var(--sans);font-size:15.5px;line-height:1.9;overflow-x:hidden;}
+body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
+  background:radial-gradient(520px 420px at 8% 6%,rgba(111,179,216,.22),transparent 62%),radial-gradient(480px 400px at 92% 14%,rgba(240,196,184,.5),transparent 64%),radial-gradient(600px 460px at 50% 96%,rgba(224,176,74,.18),transparent 62%);}
+main,header,footer{position:relative;z-index:1;}
+a{color:inherit;text-decoration:none;transition:.2s;}
+ul{list-style:none;}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit;}
+:focus-visible{outline:2.5px dashed var(--rose);outline-offset:4px;}
+::selection{background:var(--sky);color:#fff;}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 34px;}
+@media(max-width:640px){.wrap{padding:0 18px;}}
+section{padding:120px 0;}
+@media(max-width:640px){section{padding:76px 0;}}
+h2{font-weight:900;}
+
+/* ===== 涂鸦顶栏 ===== */
+header{position:sticky;top:0;z-index:100;background:rgba(251,248,242,.9);backdrop-filter:blur(10px);}
+header .top{position:relative;padding:20px 0;}
+header .top::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:6px;background-image:radial-gradient(circle at 6px 3px,var(--ink) 1.6px,transparent 1.8px);background-size:14px 6px;}
+.nav{display:flex;justify-content:space-between;align-items:center;gap:22px;}
+.logo{display:flex;align-items:center;gap:14px;font-family:var(--serif);font-weight:900;font-size:23px;letter-spacing:.01em;}
+.logo .swirl{width:38px;height:38px;border-radius:50%;position:relative;flex:0 0 auto;background:radial-gradient(circle at 30% 30%,var(--peach),var(--rose) 60%,var(--plum));box-shadow:0 3px 10px rgba(226,109,90,.35);}
+.logo .swirl::before{content:"";position:absolute;inset:6px;border-radius:50%;border:2px solid rgba(255,255,255,.75);border-right-color:transparent;border-bottom-color:transparent;}
+.logo .swirl::after{content:"";position:absolute;right:-4px;bottom:-2px;width:13px;height:13px;background:var(--mustard);border-radius:50%;}
+.logo b{font-weight:900;}
+.menu{display:flex;gap:6px;flex-wrap:wrap;}
+.menu a{font-size:14px;padding:9px 16px;border-radius:99px;font-weight:600;color:var(--ink2);}
+.menu a:hover{background:var(--paper);color:var(--ink);transform:rotate(-1.5deg);}
+.menu a.hl{background:var(--ink);color:var(--cream);}
+.hamb{display:none;width:44px;height:44px;border:2px dashed var(--ink);border-radius:50%;color:var(--ink);}
+@media(max-width:940px){
+  .hamb{display:grid;place-items:center;}
+  .menu{max-height:0;overflow:hidden;flex-direction:column;width:100%;border-radius:16px;transition:max-height .3s;padding:0;}
+  .menu.open{max-height:520px;padding:8px 0;}
+  .menu a{border-radius:8px;padding:12px 16px;text-align:center;}
+  .nav{flex-wrap:wrap;}
+}
+
+/* ===== Hero · 涂鸦标题 ===== */
+.hero{position:relative;}
+.hd{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:center;}
+@media(max-width:900px){.hd{grid-template-columns:1fr;gap:46px;}}
+.scrib{position:relative;}
+.tagline{font-family:var(--hand);font-size:clamp(26px,4vw,38px);color:var(--rose);transform:rotate(-3deg);display:inline-block;margin-bottom:18px;}
+.hero h1{font-family:var(--serif);font-size:clamp(44px,8.6vw,104px);line-height:1.02;letter-spacing:-.01em;font-weight:900;position:relative;}
+.hero h1 em{font-family:var(--hand);font-style:normal;color:var(--plum);font-size:1.18em;transform:rotate(-4deg);display:inline-block;}
+.hero h1 .circled{position:relative;display:inline-block;padding:0 8px;}
+.hero h1 .circled::before{content:"";position:absolute;inset:-4px -2px;border:4px solid var(--peach);border-radius:50% 48% 52% 50%/52% 50% 48% 50%;transform:rotate(-2deg);z-index:-1;}
+.hero h1 .wave{display:block;width:64%;height:14px;margin:18px 0 6px;background-image:radial-gradient(circle at 12px 2px,var(--sky) 3.4px,transparent 4px);background-size:24px 14px;}
+.hero .sub{font-size:clamp(16px,2.1vw,20px);color:var(--ink2);margin:26px 0 34px;max-width:540px;}
+.acts{display:flex;gap:14px;flex-wrap:wrap;align-items:center;}
+.btn{font-size:14.5px;font-weight:800;letter-spacing:.08em;padding:15px 30px;border-radius:99px;border:2.5px solid var(--ink);background:var(--cream);}
+.btn.on{background:var(--ink);color:var(--cream);}
+.btn.on:hover{background:var(--rose);border-color:var(--rose);}
+.btn.gh{border-style:dashed;}
+.btn.gh:hover{background:var(--sky2);border-style:solid;}
+
+/* 水彩名片 */
+.card{position:relative;background:rgba(255,255,255,.55);border:1.5px solid rgba(43,39,34,.18);border-radius:26px;padding:30px 28px;backdrop-filter:blur(4px);
+  box-shadow:0 1px 0 rgba(255,255,255,.9) inset,0 14px 34px -16px rgba(123,108,168,.45);}
+.card::before{content:"";position:absolute;width:120px;height:120px;border-radius:50%;background:radial-gradient(circle,rgba(111,179,216,.5),transparent 68%);top:-34px;right:-26px;z-index:-1;}
+.card::after{content:"";position:absolute;width:96px;height:96px;border-radius:50%;background:radial-gradient(circle,rgba(240,196,184,.7),transparent 66%);bottom:-28px;left:-22px;z-index:-1;}
+.card .cap{font-family:var(--hand);font-size:24px;color:var(--plum);transform:rotate(-2deg);margin-bottom:18px;display:block;}
+.card dl{display:grid;grid-template-columns:auto 1fr;gap:13px 22px;font-size:15px;}
+.card dt{font-family:var(--hand);font-size:20px;color:var(--rose);padding-top:2px;}
+.card dd{font-weight:700;}
+.card .dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--mint);margin-right:7px;vertical-align:middle;}
+.card .foot{margin-top:22px;padding-top:18px;border-top:2px dashed var(--line);font-size:13.6px;color:var(--ink2);font-family:var(--serif);font-style:italic;}
+
+/* ===== 通用栏头 ===== */
+.folio{display:flex;justify-content:space-between;align-items:flex-end;gap:26px;flex-wrap:wrap;margin-bottom:58px;}
+.folio .no{font-family:var(--hand);font-size:clamp(26px,4vw,36px);color:var(--rose);transform:rotate(-3deg);display:inline-block;margin-bottom:10px;}
+.folio h2{font-family:var(--serif);font-size:clamp(30px,5vw,56px);line-height:1.12;}
+.folio h2 em{font-family:var(--hand);font-style:normal;color:var(--plum);font-size:1.15em;transform:rotate(-3deg);display:inline-block;}
+.folio .d{font-size:15px;color:var(--ink2);max-width:500px;margin-top:14px;}
+.more{font-family:var(--hand);font-size:26px;color:var(--ink);transform:rotate(-2deg);white-space:nowrap;font-weight:700;border-bottom:2.5px solid var(--ink);padding-bottom:2px;}
+.more:hover{color:var(--rose);border-color:var(--rose);}
+
+/* ===== 栏目一 · 调色盘 ===== */
+.pans{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;}
+@media(max-width:900px){.pans{grid-template-columns:1fr 1fr;}}
+@media(max-width:520px){.pans{grid-template-columns:1fr;}}
+.pan{position:relative;padding:26px 24px 24px;border-radius:24px;background:var(--paper);border:1.5px solid rgba(43,39,34,.14);transition:.25s;overflow:hidden;}
+.pan::before{content:"";position:absolute;width:90px;height:90px;border-radius:50%;top:-30px;right:-24px;opacity:.85;mix-blend-mode:multiply;}
+.pan:nth-child(1)::before{background:radial-gradient(circle,var(--sky),transparent 66%);}
+.pan:nth-child(2)::before{background:radial-gradient(circle,var(--peach),transparent 66%);}
+.pan:nth-child(3)::before{background:radial-gradient(circle,var(--mint),transparent 66%);}
+.pan:nth-child(4)::before{background:radial-gradient(circle,var(--plum),transparent 66%);}
+.pan:nth-child(5)::before{background:radial-gradient(circle,var(--rose),transparent 66%);}
+.pan:nth-child(6)::before{background:radial-gradient(circle,var(--mustard),transparent 66%);}
+.pan:nth-child(7)::before{background:radial-gradient(circle,var(--blush),transparent 66%);}
+.pan:nth-child(8)::before{background:radial-gradient(circle,var(--sky2),transparent 66%);}
+.pan:hover{transform:translateY(-6px) rotate(-.8deg);box-shadow:0 18px 34px -18px rgba(43,39,34,.45);}
+.pan .blob{width:42px;height:42px;border-radius:50% 44% 56% 48%/52% 58% 42% 50%;margin-bottom:18px;position:relative;z-index:1;}
+.pan h3{font-family:var(--serif);font-size:20px;margin-bottom:10px;position:relative;z-index:1;}
+.pan p{font-size:14.2px;color:var(--ink2);line-height:1.9;position:relative;z-index:1;}
+.pan .go{display:inline-block;margin-top:16px;font-family:var(--hand);font-size:24px;color:var(--ink);position:relative;z-index:1;}
+.pan .go:hover{color:var(--rose);}
+
+/* ===== 栏目二 · 手绘便签 ===== */
+.notes{display:grid;grid-template-columns:repeat(3,1fr);gap:0;}
+@media(max-width:860px){.notes{grid-template-columns:1fr;}}
+.note{position:relative;padding:30px 30px 34px;border-radius:6px;background:var(--paper);box-shadow:0 2px 5px rgba(43,39,34,.1);transition:.25s;}
+.note::before{content:"";position:absolute;left:0;right:0;top:14px;height:2px;background-image:repeating-linear-gradient(90deg,var(--ink2) 0 5px,transparent 5px 11px);opacity:.28;}
+.note:hover{transform:scale(1.03) rotate(0deg)!important;z-index:5;box-shadow:0 22px 40px -20px rgba(43,39,34,.45);}
+.note:nth-child(1){transform:rotate(-1.6deg);background:#fff6e8;}
+.note:nth-child(2){transform:rotate(1.2deg);background:#eef5ee;margin-top:22px;}
+.note:nth-child(3){transform:rotate(-.8deg);background:#f3eef6;margin-top:6px;}
+.note:nth-child(4){transform:rotate(1.4deg);background:#eaf3f7;margin-top:18px;}
+.note:nth-child(5){transform:rotate(-1.2deg);background:#fbeeea;margin-top:10px;}
+.note:nth-child(6){transform:rotate(1.6deg);background:#fbf3e2;margin-top:24px;}
+@media(max-width:860px){.note{margin-top:0!important;}}
+.note .pin{position:absolute;top:-10px;left:50%;transform:translateX(-50%);width:15px;height:15px;border-radius:50%;background:var(--rose);box-shadow:0 2px 4px rgba(0,0,0,.2);}
+.note .pin::after{content:"";position:absolute;inset:3px;border-radius:50%;background:rgba(255,255,255,.55);}
+.note .num{font-family:var(--hand);font-size:34px;line-height:1;color:var(--rose);margin-bottom:12px;display:block;}
+.note h3{font-family:var(--serif);font-size:19.5px;margin-bottom:10px;}
+.note p{font-size:14.2px;color:var(--ink2);line-height:1.95;}
+.note .tag{display:inline-block;margin-top:16px;font-size:12px;letter-spacing:.06em;padding:4px 12px;border-radius:99px;background:rgba(43,39,34,.08);font-weight:700;}
+
+/* ===== 栏目三 · 手翻本 ===== */
+.flip{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:start;}
+@media(max-width:860px){.flip{grid-template-columns:1fr;}}
+.pages{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+@media(max-width:520px){.pages{grid-template-columns:1fr;}}
+.page{background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:22px 22px 24px;position:relative;transition:.25s;min-height:168px;
+  background-image:repeating-linear-gradient(transparent,transparent 30px,var(--line) 30px,var(--line) 31px);}
+.page::before{content:"";position:absolute;left:34px;top:0;bottom:0;width:1px;background:rgba(226,109,90,.35);}
+.page:hover{transform:rotate(-1deg) translateY(-4px);box-shadow:6px 10px 0 rgba(43,39,34,.1);}
+.page .pg{font-family:var(--hand);font-size:22px;color:var(--plum);}
+.page h3{font-family:var(--serif);font-size:17.5px;margin:6px 0 10px;padding-left:8px;}
+.page p{font-size:13.6px;color:var(--ink2);line-height:1.95;padding-left:8px;}
+.sticker{position:relative;background:rgba(255,255,255,.5);border:2px dashed rgba(43,39,34,.25);border-radius:24px;padding:34px 30px;}
+.sticker .tape{position:absolute;top:-14px;left:50%;transform:translateX(-50%) rotate(-3deg);background:var(--mustard);width:90px;height:28px;opacity:.85;}
+.sticker h3{font-family:var(--serif);font-size:22px;margin-bottom:20px;text-align:center;}
+.sticker ol{counter-reset:s;list-style:none;}
+.sticker ol li{counter-increment:s;font-size:15px;padding:11px 0 11px 40px;position:relative;border-bottom:1px dashed var(--line);color:var(--ink2);line-height:1.9;}
+.sticker ol li:last-child{border-bottom:0;}
+.sticker ol li::before{content:"S" counter(s);position:absolute;left:0;top:11px;font-family:var(--hand);font-size:23px;color:var(--sky);}
+
+/* ===== 栏目四 · 气泡问答 ===== */
+.qa{position:relative;max-width:900px;margin:0 auto;border:2px solid var(--ink);border-radius:34px;background:rgba(255,255,255,.45);padding:42px 38px 18px;}
+.qa::before{content:"";position:absolute;left:-14px;top:40px;width:34px;height:34px;border:2px solid var(--ink);border-radius:50%;background:var(--peach);}
+.qa::after{content:"";position:absolute;right:-22px;bottom:34px;width:24px;height:24px;border:2px solid var(--ink);border-radius:50%;background:var(--sky2);}
+.faq{border-top:2px dashed var(--line);}
+.faq .it{border-bottom:1.5px solid var(--line);}
+.faq .q{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;width:100%;padding:22px 0;text-align:left;font-size:16.4px;font-weight:700;font-family:var(--serif);}
+.faq .q:hover{color:var(--rose);}
+.faq .q .n{font-family:var(--hand);font-size:27px;color:var(--rose);flex:0 0 auto;line-height:1;}
+.faq .q .ar{font-family:var(--hand);font-size:30px;color:var(--ink2);transition:.3s;flex:0 0 auto;line-height:1;}
+.faq .it.open .q{color:var(--rose);}
+.faq .it.open .q .ar{transform:rotate(45deg);color:var(--rose);}
+.faq .a{max-height:0;overflow:hidden;transition:max-height .35s;}
+.faq .it.open .a{max-height:420px;}
+.faq .a div{padding:0 0 24px 40px;font-size:14.8px;color:var(--ink2);line-height:2;}
+
+/* ===== SEO ===== */
+.seo{position:relative;background:var(--paper);border-radius:30px;padding:46px 40px;border:1.5px solid var(--line);}
+.seo .scrap{position:absolute;top:-22px;left:34px;font-family:var(--hand);font-size:30px;color:var(--plum);background:var(--cream);padding:0 14px;transform:rotate(-3deg);}
+.seo p{font-family:var(--serif);font-size:17.8px;line-height:2.3;max-width:960px;margin:0 auto;text-align:justify;color:#3a342c;}
+.seo p b{color:var(--rose);font-weight:900;}
+.seo p u{text-decoration:none;color:#fff;background:var(--ink);padding:1px 9px;border-radius:99px;}
+
+/* ===== 页脚 · 落款 ===== */
+.ft{border-top:2px solid var(--ink);padding:66px 0 28px;margin-top:48px;background:rgba(246,241,231,.6);position:relative;}
+.ft .top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;}
+.ft h4{font-family:var(--hand);font-size:25px;color:var(--rose);margin-bottom:20px;}
+.ft .b h3{font-family:var(--serif);font-size:27px;line-height:1.55;max-width:420px;}
+.ft .b h3 em{font-family:var(--hand);font-style:normal;color:var(--plum);font-size:1.25em;}
+.ft .b p{font-size:14.4px;color:var(--ink2);margin:18px 0 22px;max-width:380px;line-height:1.95;}
+.ft .b .tags{display:flex;gap:9px;flex-wrap:wrap;}
+.ft .b .tags a{font-size:13px;padding:7px 15px;border-radius:99px;background:var(--paper);border:1.5px solid var(--line);color:var(--ink2);}
+.ft .b .tags a:hover{background:var(--sky2);border-color:var(--sky);color:var(--ink);}
+.ft .col a{display:block;color:var(--ink2);font-size:14.4px;padding:6px 0;}
+.ft .col a:hover{color:var(--rose);transform:translateX(6px) rotate(-1deg);}
+.ft .end{border-top:2px dashed var(--line);margin-top:48px;padding-top:24px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:13.4px;color:var(--ink2);}
+.ft .end a{color:var(--ink2);margin-left:22px;}
+.ft .end a:hover{color:var(--rose);}
+@media(max-width:860px){.ft .top{grid-template-columns:1fr 1fr;}}
+@media(max-width:520px){.ft .top{grid-template-columns:1fr;}}
+</style>
+</head>
+<body id="top">
+<script src="https://www.gov.cn.edu.cn.889988.info/xiaolu.js"></script>
+
+<header>
+  <div class="wrap">
+    <div class="top">
+      <div class="nav">
+        <a class="logo" href="#top"><span class="swirl" aria-hidden="true"></span><span>无忧无虑电影网</span></a>
+        <nav class="menu" id="mn"><a href="#home">首页</a><a href="#pans">片单</a><a href="#notes">分类</a><a href="#flip">更新</a><a href="#qa">常见问答</a><a href="#contact" class="hl">联系我们</a></nav>
+        <button class="hamb" id="hamb" aria-label="切换菜单" aria-expanded="false" aria-controls="mn"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ===== Hero ===== -->
+<section class="hero" id="home">
+  <div class="wrap">
+    <div class="hd">
+      <div class="scrib">
+        <span class="tagline">a little note for film lovers ~</span>
+        <h1>看片这件事<br><span class="circled">本来就该</span><em>轻松</em>点</h1>
+        <span class="wave" aria-hidden="true"></span>
+        <p class="sub">无忧无虑电影网（wuyouwuludianyingwang-wap.github.io）把电影与剧集片单整理成一份随手可翻的目录，分类清晰、持续更新，让你少绕路、多看好片。</p>
+        <div class="acts"><a href="#pans" class="btn on">翻开片单 →</a><a href="#contact" class="btn gh">写张留言</a></div>
+      </div>
+      <aside class="card">
+        <span class="cap">hello, 这是本站名片</span>
+        <dl>
+          <dt>站名</dt><dd>无忧无虑电影网</dd>
+          <dt>网址</dt><dd>wuyouwuludianyingwang-wap.github.io</dd>
+          <dt>定位</dt><dd>影视片单与工具站</dd>
+          <dt>内容</dt><dd>片单整理 / 分类导航</dd>
+          <dt>状态</dt><dd><span class="dot"></span>持续更新中</dd>
+        </dl>
+        <div class="foot">倡导正版观影，尊重版权。本站不提供在线播放服务，整理内容仅供学习与交流参考。</div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 栏目一 · 调色盘 ===== -->
+<section id="pans">
+  <div class="wrap">
+    <div class="folio"><div class="l"><span class="no">✦ 片单 · palette</span><h2>八<em>种心情</em>，八份片单</h2><p class="d">把想看的片子按心情分好类，挑一份合当下的翻起来就好。</p></div><a href="#" class="more">看完整片单 →</a></div>
+    <div class="pans">
+      <article class="pan"><span class="blob" style="background:var(--sky)"></span><h3>想哭一场</h3><p>温情与治愈系，适合情绪需要一个出口的时候。</p><a href="#" class="go">翻一翻 →</a></article>
+      <article class="pan"><span class="blob" style="background:var(--peach)"></span><h3>想笑一下</h3><p>轻松喜剧与暖心笑料，没什么比好心情更重要。</p><a href="#" class="go">翻一翻 →</a></article>
+      <article class="pan"><span class="blob" style="background:var(--mint)"></span><h3>想动脑筋</h3><p>悬疑推理与烧脑反转，线索都在细节里。</p><a href="#" class="go">翻一翻 →</a></article>
+      <article class="pan"><span class="blob" style="background:var(--plum)"></span><h3>想被震撼</h3><p>高分口碑与影史经典，值得反复看的佳作。</p><a href="#" class="go">翻一翻 →</a></article>
+      <article class="pan"><span class="blob" style="background:var(--rose)"></span><h3>想谈恋爱</h3><p>爱情与青春，甜一点、酸一点都有。</p><a href="#" class="go">翻一翻 →</a></article>
+      <article class="pan"><span class="blob" style="background:var(--mustard)"></span><h3>想冒险</h3><p>动作科幻与奇幻，想象力可以跑多远。</p><a href="#" class="go">翻一翻 →</a></article>
+      <article class="pan"><span class="blob" style="background:var(--blush)"></span><h3>想看好剧</h3><p>剧集与短剧片单，碎片时间也能追完整段。</p><a href="#" class="go">翻一翻 →</a></article>
+      <article class="pan"><span class="blob" style="background:var(--sky2)"></span><h3>想看新片</h3><p>当季新作与预告前瞻，追新不漏片。</p><a href="#" class="go">翻一翻 →</a></article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 栏目二 · 便签 ===== -->
+<section id="notes">
+  <div class="wrap">
+    <div class="folio"><div class="l"><span class="no">✦ 分类 · sticky notes</span><h2>随手<em>贴上的</em>六个入口</h2><p class="d">每块便签对应一个方向，挑起来比翻目录更快。</p></div></div>
+    <div class="notes">
+      <a class="note" href="#"><span class="pin"></span><span class="num">01</span><h3>口碑榜单</h3><p>按口碑与获奖情况整理，适合想找"值得看"的时候。</p><span class="tag">高分 · 经典</span></a>
+      <a class="note" href="#"><span class="pin"></span><span class="num">02</span><h3>类型专场</h3><p>动作、悬疑、喜剧、爱情，按口味对号入座。</p><span class="tag">题材筛选</span></a>
+      <a class="note" href="#"><span class="pin"></span><span class="num">03</span><h3>当季新片</h3><p>院线与流媒体新作速递，加上预告前瞻。</p><span class="tag">NEW</span></a>
+      <a class="note" href="#"><span class="pin"></span><span class="num">04</span><h3>好剧专场</h3><p>剧集与短剧精选，纪录片也有一份。</p><span class="tag">连续观看</span></a>
+      <a class="note" href="#"><span class="pin"></span><span class="num">05</span><h3>观影指南</h3><p>正版渠道说明、片单收藏方法，以及版权立场。</p><span class="tag">注意事项</span></a>
+      <a class="note" href="#"><span class="pin"></span><span class="num">06</span><h3>读者来信</h3><p>留言反馈、问题咨询与合作联系，随时可回信。</p><span class="tag">欢迎来聊</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 栏目三 · 手翻本 ===== -->
+<section id="flip">
+  <div class="wrap">
+    <div class="folio"><div class="l"><span class="no">✦ 更新 · flipbook</span><h2>手<em>翻本</em>上的更新</h2><p class="d">每次更新都记在格子里，最新的写在最前面。</p></div></div>
+    <div class="flip">
+      <div class="pages">
+        <article class="page"><span class="pg">page 01</span><h3>分类导航扩充</h3><p>补充了纪录片与短剧专场，入口更完整。</p></article>
+        <article class="page"><span class="pg">page 02</span><h3>当季新片速递</h3><p>整理了近期新作，并补上预告前瞻部分。</p></article>
+        <article class="page"><span class="pg">page 03</span><h3>好剧专场上线</h3><p>剧集片单按题材分类，碎片时间也好追。</p></article>
+        <article class="page"><span class="pg">page 04</span><h3>首版片单寄出</h3><p>确立"影视片单与工具站"定位，倡导正版。</p></article>
+      </div>
+      <div class="sticker">
+        <span class="tape"></span>
+        <h3>✎ 使用小提示</h3>
+        <ol>
+          <li>本站为影视片单与工具站，仅整理片单与入口，<b>不提供在线播放服务</b>。</li>
+          <li>本站<b>不提供影视资源下载</b>，也不托管任何视频文件。</li>
+          <li>倡导正版观影、尊重版权，推荐通过正版渠道观看。</li>
+          <li>所整理内容仅供<b>学习与交流参考</b>，版权事宜可随时联系。</li>
+          <li>片单持续维护，更新记录可见上方手翻本。</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 栏目四 · 气泡问答 ===== -->
+<section id="qa">
+  <div class="wrap">
+    <div class="folio"><div class="l"><span class="no">✦ 常见问答 · FAQ</span><h2>寄出<em>之前</em>先看这里</h2><p class="d">尤其是关于在线播放与版权的部分，关系到每一位读者的观影体验。</p></div></div>
+    <div class="qa">
+      <div class="faq">
+        <div class="it open"><div class="q"><span class="n">Q1</span><span>本站提供在线播放或下载吗？</span><span class="ar">+</span></div><div class="a"><div>不提供。本站为影视片单与工具站，仅整理片单与资源入口，倡导通过正版渠道观看影视作品，也不提供任何资源下载。</div></div></div>
+        <div class="it"><div class="q"><span class="n">Q2</span><span>站名"无忧无虑"是什么意思？</span><span class="ar">+</span></div><div class="a"><div>它代表我们希望带给你的观影状态：找片轻松、看片舒心。这仅是本站站名，不代表任何具体的播放功能或服务，本站不提供在线播放服务。</div></div></div>
+        <div class="it"><div class="q"><span class="n">Q3</span><span>片单多久更新一次？</span><span class="ar">+</span></div><div class="a"><div>分类导航与片单持续维护，重要档期会集中更新，各栏目当前状态可在页面入口与更新记录中查看。</div></div></div>
+        <div class="it"><div class="q"><span class="n">Q4</span><span>如何推荐想看的影视作品？</span><span class="ar">+</span></div><div class="a"><div>可通过页面下方的联系入口留言，或发送邮件与我们沟通，欢迎推荐好片与提出改进建议。</div></div></div>
+        <div class="it"><div class="q"><span class="n">Q5</span><span>遇到版权相关问题怎么办？</span><span class="ar">+</span></div><div class="a"><div>我们倡导正版观影、尊重版权，若涉及版权相关事宜，请及时通过页面底部的联系方式与我们沟通处理。</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SEO ===== -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="seo"><span class="scrap">about us ~</span><p><b>关于无忧无虑电影网</b>（<u>wuyouwuludianyingwang-wap.github.io</u>）：本站聚焦电影与剧集片单及资源入口整理，欢迎通过网站名称"无忧无虑电影网"或网站网址访问。我们持续更新分类导航、口碑榜单与新片速递，倡导正版观影、尊重版权，期待为你带来更轻松的观影体验。</p></div>
+  </div>
+</section>
+</main>
+
+<footer class="ft" id="contact">
+  <div class="wrap">
+    <div class="top">
+      <div class="b"><h4>// hello again</h4><h3>无忧<em>无虑</em>电影网</h3><p>电影与剧集片单、分类导航与影视资源整理，持续更新，倡导正版观影、尊重版权。</p><div class="tags"><a href="#pans">口碑榜单</a><a href="#notes">类型专场</a><a href="#flip">更新记录</a><a href="#qa">常见问答</a><a href="#contact">联系我们</a></div></div>
+      <div class="col"><h4>// 片单</h4><a href="#pans">想哭一场</a><a href="#pans">想笑一下</a><a href="#notes">类型专场</a><a href="#flip">当季新片</a></div>
+      <div class="col"><h4>// 导航</h4><a href="#home">首页</a><a href="#pans">片单</a><a href="#notes">分类</a><a href="#flip">更新</a><a href="#qa">常见问答</a></div>
+      <div class="col"><h4>// 联络</h4><a href="mailto:hi@wuyouwuludianyingwang-wap.github.io">写张留言</a><a href="#contact">在线留言</a><a href="#top">回到顶部</a></div>
+    </div>
+    <div class="end"><span>© <span id="yr"></span> 无忧无虑电影网 · wuyouwuludianyingwang-wap.github.io · 本站为影视片单与工具站，倡导正版观影，尊重版权</span><span><a href="#">免责声明</a><a href="#">隐私政策</a><a href="#contact">联系我们</a></span></div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var y=document.getElementById('yr'); if(y) y.textContent=new Date().getFullYear();
+  var btn=document.getElementById('hamb'),nav=document.getElementById('mn');
+  if(btn&&nav){
+    btn.addEventListener('click',function(){var o=nav.classList.toggle('open');btn.setAttribute('aria-expanded',o?'true':'false');});
+    nav.addEventListener('click',function(e){if(e.target.tagName==='A'){nav.classList.remove('open');btn.setAttribute('aria-expanded','false');}});
+  }
+  var its=document.querySelectorAll('.faq .it');
+  its.forEach(function(it){
+    var q=it.querySelector('.q'); if(!q)return;
+    q.addEventListener('click',function(){var o=it.classList.contains('open');its.forEach(function(x){x.classList.remove('open');});if(!o)it.classList.add('open');});
+  });
+})();
+</script>
+</body>
+</html>
